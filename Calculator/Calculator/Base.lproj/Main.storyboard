@@ -33,20 +33,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Nhk-7f-YAM">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="79.5"/>
                                         <subviews>
-                                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntP-rC-Icy">
-                                                <rect key="frame" x="0.0" y="0.0" width="69" height="79.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qg3-KA-fW5">
-                                                <rect key="frame" x="89" y="0.0" width="68.5" height="79.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSI-Tk-CiF">
-                                                <rect key="frame" x="177.5" y="0.0" width="69" height="79.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-iB-fwe">
-                                                <rect key="frame" x="266.5" y="0.0" width="68.5" height="79.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="79.5"/>
                                                 <color key="backgroundColor" red="0.5490196078431373" green="0.12941176470588234" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="CE">
@@ -62,6 +50,30 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="clearDisplayBox:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AlP-Zn-e4f"/>
+                                                </connections>
+                                            </button>
+                                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qg3-KA-fW5">
+                                                <rect key="frame" x="89" y="0.0" width="68.5" height="79.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntP-rC-Icy">
+                                                <rect key="frame" x="177.5" y="0.0" width="69" height="79.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqp-c9-Vtz">
+                                                <rect key="frame" x="266.5" y="0.0" width="68.5" height="79.5"/>
+                                                <color key="backgroundColor" red="0.5490196078431373" green="0.12941176470588234" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                <state key="normal" title="←">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xun-Pm-WT9"/>
                                                 </connections>
                                             </button>
                                         </subviews>

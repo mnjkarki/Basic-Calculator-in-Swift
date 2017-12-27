@@ -46,12 +46,42 @@ class ViewController: UIViewController {
             case "=":
                 pressedEqual()
                 break
+            case "←":
+                clearLastItem()
+                break
             default:
                 break
             }
         }
     }
     
+    func clearLastItem() {
+        if isFirstInputMinus {
+            isFirstInputMinus = false
+            currentItem = ""
+            return
+        }
+        
+         if !displayStack.isEmpty {
+            currentItem = displayStack.last!
+            displayStack.removeLast()
+            calculationStack.removeLast()
+            if isOperator(currentItem) {
+                currentItem = ""
+            }else {
+                let newString = currentItem.prefix(currentItem.count - 1)
+                 currentItem = String(newString)
+                if currentItem.count == 0 || (newString.count == 1 && newString == "-") {
+                    currentItem = ""
+                } else  {
+                    displayStack.append(currentItem)
+                    calculationStack.append(String((currentItem as NSString).doubleValue))
+                }
+            }
+              displayText()
+        }
+        
+    }
     
     @IBAction func clearDisplayBox(_ sender: UIButton) {
        resetAll()
